@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddStudent"
+    android:orientation="vertical"
+    android:background="@color/light_theme1"
+    >
+    <TextView
+        android:id="@+id/modStudentTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update Student"
+        android:fontFamily="@font/opensans"
+        android:textSize="30sp"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/stdIDmod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/opensans"
+        android:text="Student ID = ##"
+        android:textColor="@color/dark_theme1"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/modFName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:fontFamily="@font/opensans"
+        android:hint="First Name"
+        android:textColor="@color/dark_theme1"
+        android:textSize="22sp" />
+    <EditText
+        android:id="@+id/modLName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Last Name"
+        android:textColor="@color/dark_theme1"
+        android:fontFamily="@font/opensans"
+        android:textSize="22sp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/white"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:textSize="20sp"
+        android:textColor="@color/light_theme1"
+        android:backgroundTint="@color/accent_theme1"
+        android:fontFamily="@font/opensans"
+        android:layout_marginStart="12dp"
+        android:shadowRadius="100"
+        />
+
+
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="12dp"
+        android:fontFamily="@font/opensans"
+        android:shadowRadius="100"
+        android:text="Cancel"
+        android:textColor="@color/light_theme1"
+        android:backgroundTint="@color/accent_theme1"
+        android:textSize="20sp"
+        android:layout_alignParentRight="true"
+        />
+
+</RelativeLayout>
+
+</LinearLayout>

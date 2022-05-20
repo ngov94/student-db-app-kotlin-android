@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddStudent"
+    android:orientation="vertical"
+    android:background="@color/light_theme1"
+    >
+    <TextView
+        android:id="@+id/addStudentTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Student"
+        android:fontFamily="@font/opensans"
+        android:textSize="30sp"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        />
+
+    <EditText
+        android:id="@+id/addFName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addStudentTitle"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:fontFamily="@font/opensans"
+        android:hint="First Name"
+        android:textColor="@color/dark_theme1"
+        android:textSize="22sp" />
+    <EditText
+        android:id="@+id/addLName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Last Name"
+        android:textColor="@color/dark_theme1"
+        android:fontFamily="@font/opensans"
+        android:textSize="22sp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/white"
+        android:layout_below="@id/addFName"
+        />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textSize="20sp"
+            android:textColor="@color/light_theme1"
+            android:backgroundTint="@color/accent_theme1"
+            android:fontFamily="@font/opensans"
+            android:layout_marginStart="24dp"
+            android:shadowRadius="100"
+            android:layout_below="@id/addLName"
+        />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/opensans"
+            android:shadowRadius="100"
+            android:text="Cancel"
+            android:textColor="@color/light_theme1"
+            android:backgroundTint="@color/accent_theme1"
+            android:textSize="20sp"
+            android:layout_below="@id/addLName"
+            android:layout_alignParentRight="true"
+            />
+
+
+</RelativeLayout>
