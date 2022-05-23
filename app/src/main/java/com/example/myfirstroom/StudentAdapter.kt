@@ -28,9 +28,11 @@ class StudentAdapter(private val studentList:List<Students>) : RecyclerView.Adap
     //add element to view holder
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = studentList[position]
+        var ptext = ""+ item.firstName.toString().uppercase().subSequence(0,1) + item.lastName.toString().uppercase().subSequence(0,1)
         holder.firstNameTextView.text = item.firstName
         holder.lastNameTextView.text = item.lastName
         holder.studentIDTextView.text = item.studentId.toString()
+        holder.profileTextTextView.text = ptext
     }
 
     //size of the list/ data source
@@ -43,6 +45,7 @@ class ViewHolder(view: View, listener: StudentAdapter.OnItemClickListener) : Rec
     var firstNameTextView: TextView = view.findViewById(R.id.firstName)
     var lastNameTextView: TextView = view.findViewById(R.id.lastName)
     var studentIDTextView: TextView = view.findViewById(R.id.stdID)
+    var profileTextTextView: TextView = view.findViewById(R.id.profile_text)
 
     init {
         view.setOnClickListener{

@@ -9,10 +9,10 @@ data class Students(@PrimaryKey(autoGenerate = true) var studentId: Int? = null,
                     @ColumnInfo(name = "firstname") var firstName: String?,
                     @ColumnInfo(name = "lastname") var lastName: String?)
 
-@Entity(tableName = "subjects")
-data class Subjects(var name: String){
-    @PrimaryKey(autoGenerate = true) var subjectId: Int? = null
-}
+//@Entity(tableName = "subjects")
+//data class Subjects(var name: String){
+//    @PrimaryKey(autoGenerate = true) var subjectId: Int? = null
+//}
 
 //@Entity(tableName = "enrollment")
 //data class Enrollment(@PrimaryKey(autoGenerate = true) var enrollmentId: Int,

@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Student Database"
+        android:textStyle="bold"
         android:gravity="center"
         android:fontFamily="@font/opensans"
         android:textSize="35sp"
@@ -23,8 +24,8 @@
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
         android:layout_margin="8dp"
+        android:layout_weight="1"
         tools:listitem="@layout/student_list_item_layout"
 
         />
