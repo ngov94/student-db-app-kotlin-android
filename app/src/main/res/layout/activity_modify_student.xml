@@ -34,6 +34,18 @@
         android:textColor="@color/dark_theme1"
         android:textSize="18sp" />
 
+    <TextView
+        android:id="@+id/fnameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First Name"
+        android:fontFamily="@font/opensans"
+        android:textColor="@color/dark_theme1"
+        android:textSize="15sp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        />
+
     <EditText
         android:id="@+id/modFName"
         android:layout_width="match_parent"
@@ -47,6 +59,19 @@
         android:hint="First Name"
         android:textColor="@color/dark_theme1"
         android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/lnameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last Name"
+        android:fontFamily="@font/opensans"
+        android:textColor="@color/dark_theme1"
+        android:textSize="15sp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        />
+
     <EditText
         android:id="@+id/modLName"
         android:layout_width="match_parent"
@@ -56,7 +81,7 @@
         android:fontFamily="@font/opensans"
         android:textSize="22sp"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="16dp"
         android:background="@color/white"

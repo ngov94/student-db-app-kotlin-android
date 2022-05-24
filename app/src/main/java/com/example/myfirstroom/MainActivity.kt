@@ -78,6 +78,6 @@ class MainActivity : AppCompatActivity() {
     fun getStudents(studentList: List<Students>){
         this.studentList.clear()
         this.studentList.addAll(studentList)
-        adapter.notifyDataSetChanged()
+        adapter.notifyDataSetChanged()//let adapter know the data changed
     }
 }
