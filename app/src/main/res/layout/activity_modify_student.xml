@@ -14,6 +14,8 @@
         android:layout_height="wrap_content"
         android:text="Update Student"
         android:fontFamily="@font/opensans"
+        android:textStyle="bold"
+        android:textColor="@color/dark_theme1"
         android:textSize="30sp"
         android:layout_margin="20dp"
         android:gravity="center"

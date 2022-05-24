@@ -1,5 +1,7 @@
 package com.example.myfirstroom
 
+import androidx.lifecycle.LiveData
+
 import androidx.room.*
 
 //contract for interacting with DB
@@ -11,8 +13,12 @@ interface StudentsDao {
     fun insertStudents(student: Students)
 
     //read
+//    @Query("select * from students")
+//    fun selectStudents(): List<Students>
+
     @Query("select * from students")
-    fun selectStudents(): List<Students>
+    fun selectStudents(): LiveData<List<Students>>
+
 
     //update
     @Update

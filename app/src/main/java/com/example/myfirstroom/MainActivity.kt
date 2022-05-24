@@ -13,19 +13,27 @@ import kotlinx.android.synthetic.main.student_list_item_layout.view.*
 
 class MainActivity : AppCompatActivity() {
 
-    val repo:StudentRepository by lazy{
-        StudentRepository(this)
-    }
+//    val repo:StudentRepository by lazy{
+//        StudentRepository(this)
+//    }
+
+    lateinit var vm: MainViewModel
+    var studentList =  ArrayList<Students>()
+    var adapter = StudentAdapter(studentList)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var studentList:ArrayList<Students> = repo.getAllStudents() as ArrayList<Students>
+        vm = MainViewModel(application)
+
+        vm.allStudents?.observe(this) { studentList ->
+            getStudents(studentList)
+        }
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
 
         //create an adapter with data source
-        var adapter = StudentAdapter(studentList)
+//        var adapter = StudentAdapter(studentList)
         //Bind custom adapter to the recyclerView
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
@@ -55,7 +63,7 @@ class MainActivity : AppCompatActivity() {
                 val stid = viewHolder.itemView.stdID.text.toString().toInt()
                 val fn = viewHolder.itemView.firstName.text.toString()
                 val ln = viewHolder.itemView.lastName.text.toString()
-                repo.deleteStudent(Students(stid, fn, ln))
+                vm.deleteStudent(Students(stid, fn, ln))
                 Toast.makeText(this@MainActivity, "$fn $ln has been deleted", Toast.LENGTH_LONG).show()
                 studentList.removeAt(position)
                 recyclerView.adapter?.notifyItemRemoved(position)
@@ -65,5 +73,11 @@ class MainActivity : AppCompatActivity() {
         val itemTouchHelper = ItemTouchHelper(swipeDelete)
         itemTouchHelper.attachToRecyclerView((recyclerView))
 
+    }
+
+    fun getStudents(studentList: List<Students>){
+        this.studentList.clear()
+        this.studentList.addAll(studentList)
+        adapter.notifyDataSetChanged()
     }
 }

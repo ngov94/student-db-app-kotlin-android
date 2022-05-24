@@ -11,10 +11,13 @@ import kotlinx.android.synthetic.main.activity_modify_student.btnCancel
 
 class ModifyStudent : AppCompatActivity() {
 
-    val repo:StudentRepository = StudentRepository(this)
+   // val repo:StudentRepository = StudentRepository(this)
+   lateinit var vm: MainViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_modify_student)
+
+        vm = MainViewModel(application)
 
         val intent = getIntent()
         val firstName = intent.getStringExtra("firstName")
@@ -30,7 +33,7 @@ class ModifyStudent : AppCompatActivity() {
             var modLastName = modLName.text.toString()
 
             if (stdID != null) {
-                repo.updateStudent(Students(studentId = stdID.toInt(),firstName = modFirstName, lastName = modLastName))
+                vm.updateStudent(Students(studentId = stdID.toInt(),firstName = modFirstName, lastName = modLastName))
                 Toast.makeText(this, "$modFirstName $modLastName has been updated.", Toast.LENGTH_LONG).show()
             }
             var intentMain = Intent(this, MainActivity::class.java)

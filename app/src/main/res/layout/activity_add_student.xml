@@ -13,31 +13,57 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Add Student"
+        android:textStyle="bold"
         android:fontFamily="@font/opensans"
+        android:textColor="@color/dark_theme1"
         android:textSize="30sp"
         android:layout_margin="20dp"
         android:gravity="center"
         />
 
+    <TextView
+        android:id="@+id/fnameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addStudentTitle"
+        android:text="First Name"
+        android:fontFamily="@font/opensans"
+        android:textColor="@color/dark_theme1"
+        android:textSize="15sp"
+        android:layout_marginStart="24dp"
+
+        />
     <EditText
         android:id="@+id/addFName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/addStudentTitle"
+        android:layout_below="@id/fnameTitle"
         android:layout_marginStart="24dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="8dp"
         android:background="@color/white"
         android:fontFamily="@font/opensans"
-        android:hint="First Name"
         android:textColor="@color/dark_theme1"
         android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/lnameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addFName"
+        android:text="Last Name"
+        android:fontFamily="@font/opensans"
+        android:textColor="@color/dark_theme1"
+        android:textSize="15sp"
+        android:layout_marginStart="24dp"
+
+        />
+
     <EditText
         android:id="@+id/addLName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Last Name"
         android:textColor="@color/dark_theme1"
         android:fontFamily="@font/opensans"
         android:textSize="22sp"
@@ -46,7 +72,7 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="16dp"
         android:background="@color/white"
-        android:layout_below="@id/addFName"
+        android:layout_below="@id/lnameTitle"
         />
 
         <Button

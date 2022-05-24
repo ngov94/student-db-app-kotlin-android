@@ -14,32 +14,34 @@
        app:cardCornerRadius="2dp"
        android:elevation="60dp">
 
+       <RelativeLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+
        <ImageView
            android:layout_width="50dp"
            android:layout_height="50dp"
            android:src="@drawable/profile_pic"
            android:layout_margin="8dp"
            />
+       <TextView
+           android:id="@+id/profile_text"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:fontFamily="@font/opensans"
+           android:text="TX"
+           android:textColor="@color/white"
+           android:textSize="25sp"
+           android:textStyle="bold"
+           android:layout_centerInParent="true"
+           />
+       </RelativeLayout>
 
        <LinearLayout
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:orientation="horizontal"
            android:layout_gravity="center">
-
-         <TextView
-             android:id="@+id/profile_text"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="TX"
-             android:textStyle="bold"
-             android:textSize="25sp"
-             android:layout_marginTop="8dp"
-             android:layout_marginBottom="8dp"
-             android:layout_marginStart="16dp"
-             android:layout_marginEnd="8dp"
-             />
-
 
            <TextView
                android:id="@+id/stdID"
@@ -52,7 +54,7 @@
                android:textSize="20sp"
                android:layout_marginTop="8dp"
                android:layout_marginBottom="8dp"
-               android:layout_marginStart="8dp"
+               android:layout_marginStart="70dp"
                android:layout_marginEnd="2dp"
                android:padding="4dp"
                />
