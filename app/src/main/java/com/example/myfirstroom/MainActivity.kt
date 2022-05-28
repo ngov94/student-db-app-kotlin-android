@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         vm = MainViewModel(application)
 
+        //observer attached
         vm.allStudents?.observe(this) { studentList ->
             getStudents(studentList)
         }
@@ -57,7 +58,7 @@ class MainActivity : AppCompatActivity() {
         })
 
         //delete
-        val swipeDelete = object : SwipeDelete(){
+        val swipeGesture = object : SwipeGesture(){
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 val position = viewHolder.adapterPosition
                 val stid = viewHolder.itemView.stdID.text.toString().toInt()
@@ -70,7 +71,7 @@ class MainActivity : AppCompatActivity() {
 
             }
         }
-        val itemTouchHelper = ItemTouchHelper(swipeDelete)
+        val itemTouchHelper = ItemTouchHelper(swipeGesture)
         itemTouchHelper.attachToRecyclerView((recyclerView))
 
     }
